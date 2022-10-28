@@ -69,7 +69,6 @@ def fetch_by_url(org_url, source):
             'end_dt': '',
             'Source_url': ''
         }
-        org_url = prepare_http_url(org_url)
         print("Processing Website... " + org_url)
         source = 'all' if source is None else str(source).lower().strip()
     # Get all sources

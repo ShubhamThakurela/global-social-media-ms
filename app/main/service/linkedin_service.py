@@ -351,7 +351,9 @@ def extract_linkedin_public_page(soup, url):
 def prepare_linkedin_url(url, url_type):
     if url_type == 'GUEST':
         if 'organization-guest' not in url:
+            url = url.replace('http://', 'https://')
             url = url.replace('/company/', '/organization-guest/company/')
+
     elif url_type == 'SHOWCASE':
         if 'organization-guest' in url:
             url = url.replace('/organization-guest/company/', '/showcase/')
